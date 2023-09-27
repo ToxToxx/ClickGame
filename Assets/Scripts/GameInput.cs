@@ -40,9 +40,13 @@ public class GameInput : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit))
         {
-            if(hit.collider != null)
+            if (hit.collider != null)
             {
                 Debug.Log(hit.collider.name);
+                if (hit.collider.GetComponent<IncrementingValue>())
+                {
+                    Destroy(hit.collider.gameObject);
+                }
             }
         }
     }
