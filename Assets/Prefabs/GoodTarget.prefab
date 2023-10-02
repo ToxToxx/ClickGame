@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 5232056932167067679}
   - component: {fileID: 756670817986932267}
   - component: {fileID: 4483079014942048149}
+  - component: {fileID: 3294551674630526859}
   m_Layer: 0
   m_Name: GoodTarget
   m_TagString: Untagged
@@ -179,3 +180,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageIncrementor: 5
+--- !u!114 &3294551674630526859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688810041290498976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce99ee0b3e38daa4fa219ae34960f586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRate: 1
+  minSpeed: 12
+  maxSpeed: 16
+  maxTorque: 10
+  xRange: 4
