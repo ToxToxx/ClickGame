@@ -39,6 +39,6 @@ public class TargetSpawnParameters : MonoBehaviour
 
     private Vector3 RandomSpawnPos()
     {
-        return new Vector3(Random.Range(-xRange, xRange), transform.position.y);
+        return new Vector3(Random.Range(-xRange, xRange), SpawnManager.Instance.transform.position.y);
     }
 }
