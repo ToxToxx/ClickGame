@@ -15,7 +15,13 @@ public class HealthPoints : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        health -= damageAmount;
+        if (health <= 0)
+        {
+            health = 0;
+        } else
+        {
+            health -= damageAmount;
+        }
     }
 
     public int GetHealth() 
