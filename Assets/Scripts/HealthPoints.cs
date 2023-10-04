@@ -12,16 +12,16 @@ public class HealthPoints : MonoBehaviour
     {
         health = maxHealth;
     }
-
-    public void TakeDamage(int damageAmount)
+    private void Update()
     {
         if (health <= 0)
         {
             health = 0;
-        } else
-        {
-            health -= damageAmount;
         }
+    }
+    public void TakeDamage(int damageAmount)
+    {         
+        health -= damageAmount;       
     }
 
     public int GetHealth() 
