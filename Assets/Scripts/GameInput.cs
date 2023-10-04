@@ -46,6 +46,7 @@ public class GameInput : MonoBehaviour
                 if (hit.collider.GetComponent<IncrementingValue>())
                 {
                     Destroy(hit.collider.gameObject);
+                    hit.collider.GetComponent<IncrementingValue>().IncrementValue();
                 }
             }
         }

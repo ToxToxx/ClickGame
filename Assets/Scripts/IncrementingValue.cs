@@ -6,7 +6,7 @@ public class IncrementingValue : MonoBehaviour
 {
     [SerializeField] private int DamageIncrementor;
 
-    private void OnDestroy()
+    public void IncrementValue()
     {
         DamageManager.Instance.AddingDamage(DamageIncrementor);
     }
