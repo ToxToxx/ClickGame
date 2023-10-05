@@ -9,19 +9,16 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private List<GameObject> targets;
     private float spawnRate = 1.0f;
 
+
     private void Awake()
     {
         Instance = this;
     }
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(SpawnTarget());
-      
-
     }
 
-    // Update is called once per frame
     void Update()
     {
         
