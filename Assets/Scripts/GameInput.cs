@@ -31,16 +31,16 @@ public class GameInput : MonoBehaviour
     }
     private void EndedCLick()
     {
-        DetectObject();
+        DetectAndDestroyFlyingTarget();
     }
 
-    private void DetectObject()
+    private void DetectAndDestroyFlyingTarget()
     {
         Ray ray = mainCamera.ScreenPointToRay(playerInputActions.Player.Position.ReadValue<Vector2>());
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit))
         {
-            if (hit.collider != null)
+            if (hit.collider)
             {
                 if (hit.collider.GetComponent<DestroyingObject>())
                 {
