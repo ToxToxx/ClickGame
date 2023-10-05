@@ -1300,7 +1300,7 @@ GameObject:
   - component: {fileID: 1324240531}
   - component: {fileID: 1324240530}
   m_Layer: 5
-  m_Name: Background
+  m_Name: EnemyImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1794,6 +1794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - {fileID: 2688810041290498976, guid: aa212c5123392ff4e9ee765555b1d84f, type: 3}
+  - {fileID: 6565879221160796710, guid: c3c7f40019bc71245b6d7c75eb12c7cc, type: 3}
 --- !u!1 &1936064336
 GameObject:
   m_ObjectHideFlags: 0
