@@ -38,26 +38,23 @@ public class GameInput : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(playerInputActions.Player.Position.ReadValue<Vector2>());
         RaycastHit hit;
-        if(Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider)
+            if (hit.collider && hit.collider.GetComponent<DestroyingObject>())
             {
-                if (hit.collider.GetComponent<DestroyingObject>())
+                Destroy(hit.collider.gameObject);
+
+                if (hit.collider.GetComponent<IncrementingPlayerDamage>())
                 {
-                    Destroy(hit.collider.gameObject);
-
-                    if (hit.collider.GetComponent<IncrementingValue>())
-                    {
-                        hit.collider.GetComponent<IncrementingValue>().IncrementValue();
-                    }
-                    else if (hit.collider.GetComponent<DealingPlayerDamage>())
-                    {
-                        hit.collider.GetComponent<DealingPlayerDamage>().DealPlayerDamage();
-                    }
+                    hit.collider.GetComponent<IncrementingPlayerDamage>().IncrementValue();
                 }
-
+                else if (hit.collider.GetComponent<DealingPlayerDamage>())
+                {
+                    hit.collider.GetComponent<DealingPlayerDamage>().DealPlayerDamage();
+                }
             }
 
         }
     }
 }
+

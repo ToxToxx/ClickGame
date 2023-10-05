@@ -7,6 +7,7 @@ public class GrabAndDealSpell : MonoBehaviour
     private int objectsIncrement;
     [SerializeField] private float spellCooldown;
     [SerializeField] private int damageOfSpell;
+
     void Start()
     {
         objectsIncrement = 0;

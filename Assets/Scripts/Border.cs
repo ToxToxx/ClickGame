@@ -10,7 +10,7 @@ public class Border : MonoBehaviour
     {
         Destroy(other.gameObject);
 
-        if (other.gameObject.GetComponent<IncrementingValue>())
+        if (other.gameObject.GetComponent<IncrementingPlayerDamage>())
         {
             PlayerHealth.Instance.TakeDamage(looseObjectDamage);
         }

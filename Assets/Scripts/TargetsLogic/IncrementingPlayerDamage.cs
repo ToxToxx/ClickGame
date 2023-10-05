@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IncrementingValue : MonoBehaviour
+public class IncrementingPlayerDamage : MonoBehaviour
 {
     [SerializeField] private int damageIncrementor;
 
