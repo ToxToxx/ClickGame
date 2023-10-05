@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class IncrementingValue : MonoBehaviour
 {
-    [SerializeField] private int DamageIncrementor;
+    [SerializeField] private int damageIncrementor;
 
     public void IncrementValue()
     {
-        DamageManager.Instance.AddingDamage(DamageIncrementor);
+        DamageManager.Instance.AdddingPlayerDamage(damageIncrementor);
     }
 }

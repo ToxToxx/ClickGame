@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b981f32bfe8c1eb47bb1ca922a7887de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageIncrementor: 5
+  damageIncrementor: 5
 --- !u!114 &3294551674630526859
 MonoBehaviour:
   m_ObjectHideFlags: 0

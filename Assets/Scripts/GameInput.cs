@@ -45,15 +45,19 @@ public class GameInput : MonoBehaviour
                 if (hit.collider.GetComponent<DestroyingObject>())
                 {
                     Destroy(hit.collider.gameObject);
+
                     if (hit.collider.GetComponent<IncrementingValue>())
                     {
                         hit.collider.GetComponent<IncrementingValue>().IncrementValue();
                     }
-                    
+                    else if (hit.collider.GetComponent<DealingPlayerDamage>())
+                    {
+                        hit.collider.GetComponent<DealingPlayerDamage>().DealPlayerDamage();
+                    }
                 }
+
             }
+
         }
     }
-
-
 }
