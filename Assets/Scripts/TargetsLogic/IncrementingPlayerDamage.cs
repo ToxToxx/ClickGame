@@ -11,3 +11,4 @@ public class IncrementingPlayerDamage : MonoBehaviour
         DamageManager.Instance.AdddingPlayerDamage(damageIncrementor);
     }
 }
+
