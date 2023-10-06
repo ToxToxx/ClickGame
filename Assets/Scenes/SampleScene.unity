@@ -785,7 +785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellCooldown: 4
-  damageOfSpell: 3
+  damageOfSpell: 5
 --- !u!1 &547610913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,6 +2116,8 @@ MonoBehaviour:
   targets:
   - {fileID: 2688810041290498976, guid: aa212c5123392ff4e9ee765555b1d84f, type: 3}
   - {fileID: 6565879221160796710, guid: c3c7f40019bc71245b6d7c75eb12c7cc, type: 3}
+  - {fileID: 5678473081212651082, guid: 46f3dd32c6012b24b83782584e5ba1a3, type: 3}
+  - {fileID: 6229217795911443028, guid: eef48d55a3fd4d94d9b0be8c68f203bf, type: 3}
 --- !u!1 &1936064336
 GameObject:
   m_ObjectHideFlags: 0
