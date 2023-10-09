@@ -12,7 +12,9 @@ public class DamageManager : MonoBehaviour
     [SerializeField] private int playerDamage;
     [SerializeField] private int enemyDamage;
 
-    [SerializeField] private float damageTimer = 3.0f;
+    private float damageTimer;
+    [SerializeField] private float damageTimerMax = 3.0f;
+
 
     private void Awake()
     {
@@ -56,5 +58,10 @@ public class DamageManager : MonoBehaviour
     public int GetEnemyDamage()
     {
         return enemyDamage;
+    }
+
+    public float GetAttackTimerNormalized()
+    {
+        return;
     }
 }
