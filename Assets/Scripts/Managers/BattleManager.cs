@@ -26,12 +26,10 @@ public class BattleManager : MonoBehaviour
     {
         if (playerGameObject.GetComponent<HealthPoints>().GetHealth() <= 0)
         {
-            Debug.Log("Враг победил");
             OnGameLost?.Invoke(this, EventArgs.Empty);
             StopTime();
         } else if (enemyGameObject.GetComponent<HealthPoints>().GetHealth() <= 0)
         {
-            Debug.Log("Игрок победил");
             OnGameWon?.Invoke(this, EventArgs.Empty);
             StopTime();
         }

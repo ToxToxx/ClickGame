@@ -13,18 +13,25 @@ public class DamageManager : MonoBehaviour
     [SerializeField] private int enemyDamage;
 
     private float damageTimer;
-    [SerializeField] private float damageTimerMax = 3.0f;
+    [SerializeField] private float damageTimerMax = 10f;
 
 
     private void Awake()
     {
         Instance = this;
         playerDamage = 0;
+        enemyDamage = 0;
+        
     }
 
     private void Start()
     {
+        damageTimer = damageTimerMax;   
         StartCoroutine(DealDamage());
+    }
+    private void Update()
+    {
+        damageTimer -= Time.deltaTime;
     }
     public void AdddingPlayerDamage(int incrementor)
     {
@@ -44,7 +51,8 @@ public class DamageManager : MonoBehaviour
     {
         while(true)
         {
-            yield return new WaitForSeconds(damageTimer);
+            yield return new WaitForSeconds(damageTimerMax);
+            damageTimer = damageTimerMax;
             enemyGameObject.GetComponent<HealthPoints>().TakeDamage(playerDamage);
             playerGameObject.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
             playerDamage = 0;
@@ -62,6 +70,6 @@ public class DamageManager : MonoBehaviour
 
     public float GetAttackTimerNormalized()
     {
-        return;
+        return 1 - (damageTimer / damageTimerMax);
     }
 }
