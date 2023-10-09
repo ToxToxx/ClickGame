@@ -942,7 +942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8deb2bef8c7f0fa4ea04a2a9f3989395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpellUI: {fileID: 1860055405}
   spellCooldown: 4
   damageOfSpell: 5
 --- !u!1 &516066143
@@ -2808,7 +2807,7 @@ GameObject:
   - component: {fileID: 1570796181}
   - component: {fileID: 1570796180}
   m_Layer: 5
-  m_Name: HealthPointsUIText
+  m_Name: EnemySpellText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3426,7 +3425,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f3e62211b80c54e80a6e56aebb01f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpellGrabAndDeal: {fileID: 413918995}
+  enemySpell: {fileID: 413918992}
+  enemySpellText: {fileID: 1570796180}
 --- !u!1 &1925676698
 GameObject:
   m_ObjectHideFlags: 0

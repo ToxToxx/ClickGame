@@ -1,40 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class EnemySpellUI : MonoBehaviour
 {
     [SerializeField] private GameObject enemySpell;
-    private float timer;
+    [SerializeField] private TextMeshProUGUI enemySpellText;
+    private float timer = 0;
+    private float maxTimer;
 
     void Start()
-    {        
+    {
+        maxTimer = enemySpell.GetComponent<GrabAndDealSpell>().GetSpellCooldown();
         HideSpellUI();
-     
+        StartCoroutine(ShowWorkingSpell());
     }
     private void Update()
     {
-        ShowWorkingSpell();
+        if( timer < 0)
+        {
+            HideSpellUI();
+        }
+        timer -= Time.deltaTime * 2;
     }
 
     private void HideSpellUI()
     {
-        gameObject.SetActive(false);
+        enemySpellText.text = " ";
     }
     private void ShowSpellUI()
     {
-        gameObject.SetActive(true);
+        enemySpellText.text = "ÕÂÀÒÀÉ";
     }
-    private void ShowWorkingSpell()
+    IEnumerator ShowWorkingSpell()
     {
-        if (timer >= enemySpell.GetComponent<GrabAndDealSpell>().GetSpellCooldown()) 
-        {
-            ShowSpellUI();
-        } else
-        {
-            HideSpellUI();
-            timer += Time.deltaTime;
-        }
-        
+        yield return new WaitForSeconds(enemySpell.GetComponent<GrabAndDealSpell>().GetSpellCooldown());
+        ShowSpellUI();
+        timer = maxTimer;
     }
 }
