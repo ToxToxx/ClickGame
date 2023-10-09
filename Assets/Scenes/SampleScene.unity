@@ -942,7 +942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8deb2bef8c7f0fa4ea04a2a9f3989395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellCooldown: 4
+  spellCooldown: 4.5
   damageOfSpell: 5
 --- !u!1 &516066143
 GameObject:
@@ -2855,14 +2855,14 @@ MonoBehaviour:
   m_text: "\u0425\u0412\u0410\u0422\u0410\u0419"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 8b29aaa3eec7468097ff07adfcf29ac9, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278252799
-  m_fontColor: {r: 1, g: 0.95686066, b: 0, a: 1}
+    rgba: 4278212863
+  m_fontColor: {r: 1, g: 0.34323487, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

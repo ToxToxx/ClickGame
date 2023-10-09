@@ -7,24 +7,24 @@ public class EnemySpellUI : MonoBehaviour
 {
     [SerializeField] private GameObject enemySpell;
     [SerializeField] private TextMeshProUGUI enemySpellText;
-    private float timer = 0;
-    private float maxTimer;
+    private float timerRange = 0.9f;
 
     void Start()
     {
-        maxTimer = enemySpell.GetComponent<GrabAndDealSpell>().GetSpellCooldown();
         HideSpellUI();
-        StartCoroutine(ShowWorkingSpell());
     }
+
     private void Update()
     {
-        if( timer < 0)
+        if(enemySpell.GetComponent<GrabAndDealSpell>().GetAttackTimerNormalized() > timerRange)
+        {
+            ShowSpellUI();
+        }
+        else
         {
             HideSpellUI();
         }
-        timer -= Time.deltaTime * 2;
     }
-
     private void HideSpellUI()
     {
         enemySpellText.text = " ";
@@ -33,10 +33,5 @@ public class EnemySpellUI : MonoBehaviour
     {
         enemySpellText.text = "’¬¿“¿…";
     }
-    IEnumerator ShowWorkingSpell()
-    {
-        yield return new WaitForSeconds(enemySpell.GetComponent<GrabAndDealSpell>().GetSpellCooldown());
-        ShowSpellUI();
-        timer = maxTimer;
-    }
+
 }

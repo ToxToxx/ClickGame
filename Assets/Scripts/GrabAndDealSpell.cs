@@ -8,13 +8,17 @@ public class GrabAndDealSpell : MonoBehaviour
     private int objectsIncrement;
     [SerializeField] private float spellCooldown;
     [SerializeField] private int damageOfSpell;
+    private float timerOfSpell;
 
     void Start()
     {
         objectsIncrement = 0;
         StartCoroutine(GrabAndDeal());
     }
-
+    private void Update()
+    {
+        timerOfSpell -= Time.deltaTime;
+    }
 
     IEnumerator GrabAndDeal()
     {
@@ -34,6 +38,7 @@ public class GrabAndDealSpell : MonoBehaviour
             {
 
             }
+            timerOfSpell = spellCooldown;
             DamageManager.Instance.AdddingEnemyDamage(damageOfSpell * objectsIncrement);
             objectsIncrement = 0;
         }
@@ -43,5 +48,9 @@ public class GrabAndDealSpell : MonoBehaviour
     public float GetSpellCooldown()
     {
         return spellCooldown;
+    }
+    public float GetAttackTimerNormalized()
+    {
+        return 1 - (timerOfSpell / spellCooldown);
     }
 }
