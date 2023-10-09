@@ -11,12 +11,6 @@ public class BattleManager : MonoBehaviour
     [SerializeField] private GameObject playerGameObject;
     [SerializeField] private GameObject enemyGameObject;
 
-    void Start()
-    {
-        
-    }
-
-
     void Update()
     {
         GameOver();

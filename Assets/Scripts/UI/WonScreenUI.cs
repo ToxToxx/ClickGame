@@ -16,11 +16,6 @@ public class WonScreenUI : MonoBehaviour
         Show();
     }
 
-    void Update()
-    {
-        
-    }
-
     private void Show()
     {
         gameObject.SetActive(true);

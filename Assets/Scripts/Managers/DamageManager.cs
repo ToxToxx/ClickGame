@@ -41,12 +41,6 @@ public class DamageManager : MonoBehaviour
     {
         enemyDamage += incrementor;
     }
-
-    public int GetCurrentPlayerDamage()
-    {
-        return playerDamage;
-    }
-
     IEnumerator DealDamage()
     {
         while(true)
