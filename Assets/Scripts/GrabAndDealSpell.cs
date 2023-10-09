@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,15 +22,13 @@ public class GrabAndDealSpell : MonoBehaviour
         {
             yield return new WaitForSeconds(spellCooldown);
             try
-            {
+            {         
                 DealingPlayerDamage[] objectsToDestroy = FindObjectsOfType<DealingPlayerDamage>();
                 foreach (DealingPlayerDamage obj in objectsToDestroy)
                 {
                     Destroy(obj.gameObject);
                     objectsIncrement++;
-                }
-               
-
+                }              
             }
             catch
             {
@@ -39,5 +38,10 @@ public class GrabAndDealSpell : MonoBehaviour
             objectsIncrement = 0;
         }
         
+    }
+
+    public float GetSpellCooldown()
+    {
+        return spellCooldown;
     }
 }
