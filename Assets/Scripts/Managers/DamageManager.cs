@@ -49,4 +49,12 @@ public class DamageManager : MonoBehaviour
             enemyDamage = 0;
         }
     }
+    public int GetPlayerDamage()
+    {
+        return playerDamage;
+    }
+    public int GetEnemyDamage()
+    {
+        return enemyDamage;
+    }
 }
