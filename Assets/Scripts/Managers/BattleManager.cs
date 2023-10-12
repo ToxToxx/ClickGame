@@ -7,12 +7,16 @@ public class BattleManager : MonoBehaviour
 {
     public event EventHandler OnGameWon;
     public event EventHandler OnGameLost;
+    
+    private int WonCounter;
+
 
     [SerializeField] private GameObject playerGameObject;
     [SerializeField] private GameObject enemyGameObject;
     private void Awake()
     {
         StartTime();
+        WonCounter = enemyGameObject.GetComponent<EnemyHealth>().GetEnemyDeathCounter();
     }
     void Update()
     {
@@ -25,10 +29,12 @@ public class BattleManager : MonoBehaviour
         {
             OnGameLost?.Invoke(this, EventArgs.Empty);
             StopTime();
-        } else if (enemyGameObject.GetComponent<HealthPoints>().GetHealth() <= 0)
+        } else if (enemyGameObject.GetComponent<EnemyHealth>().GetEnemyDeathCounter() != WonCounter)
         {
-            OnGameWon?.Invoke(this, EventArgs.Empty);
-            StopTime();
+            PlayerHealth.Instance.HealHealth();
+            WonCounter = enemyGameObject.GetComponent<EnemyHealth>().GetEnemyDeathCounter();
+           // OnGameWon?.Invoke(this, EventArgs.Empty);
+            //StopTime();
         }
     }
 
