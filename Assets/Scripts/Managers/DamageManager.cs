@@ -19,14 +19,14 @@ public class DamageManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        playerDamage = 0;
-        enemyDamage = 0;
-        
+           
     }
 
     private void Start()
     {
-        damageTimer = damageTimerMax;   
+        damageTimer = damageTimerMax;
+        playerDamage = 0;
+        enemyDamage = 0;
         StartCoroutine(DealDamage());
     }
     private void Update()

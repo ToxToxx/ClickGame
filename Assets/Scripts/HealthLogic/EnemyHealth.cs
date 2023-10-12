@@ -20,7 +20,15 @@ public class EnemyHealth : HealthPoints
         if(health <= 0)
         {
             enemyDeathCounter++;
-            maxHealth = maxHealth * 2;
+            if(maxHealth < 100)
+            {
+                maxHealth = maxHealth * 2;
+            }
+            else
+            {
+                maxHealth += 10;
+            }
+            
             health = maxHealth;
         }
     }

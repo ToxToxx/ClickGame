@@ -16,7 +16,8 @@ public class PlayerHealth : HealthPoints
     {
         health += 50;
         if(health > maxHealth)
-        {;
+        {
+            maxHealth += 10;
             health = maxHealth;
         }
     }
