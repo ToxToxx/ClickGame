@@ -51,6 +51,7 @@ public class DamageManager : MonoBehaviour
             playerGameObject.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
             playerDamage = 0;
             enemyDamage = 0;
+            
         }
     }
     public int GetPlayerDamage()

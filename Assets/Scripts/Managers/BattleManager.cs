@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
-    public event EventHandler OnGameWon;
     public event EventHandler OnGameLost;
     
     private int WonCounter;
@@ -33,8 +32,6 @@ public class BattleManager : MonoBehaviour
         {
             PlayerHealth.Instance.HealHealth();
             WonCounter = enemyGameObject.GetComponent<EnemyHealth>().GetEnemyDeathCounter();
-           // OnGameWon?.Invoke(this, EventArgs.Empty);
-            //StopTime();
         }
     }
 

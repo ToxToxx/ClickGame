@@ -5,7 +5,6 @@ using UnityEngine;
 public class HealthPoints : MonoBehaviour
 {
     [SerializeField] protected int health;
-
     [SerializeField] protected int maxHealth;
 
     private void Start()
@@ -21,11 +20,13 @@ public class HealthPoints : MonoBehaviour
     }
     public void TakeDamage(int damageAmount)
     {         
-        health -= damageAmount;       
+        health -= damageAmount;
     }
 
     public int GetHealth() 
     { 
         return health;
     }
+
+
 }
