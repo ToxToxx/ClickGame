@@ -10,7 +10,10 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField] private GameObject playerGameObject;
     [SerializeField] private GameObject enemyGameObject;
-
+    private void Awake()
+    {
+        StartTime();
+    }
     void Update()
     {
         GameOver();
@@ -32,5 +35,9 @@ public class BattleManager : MonoBehaviour
     private void StopTime()
     {
         Time.timeScale = 0f;
+    }
+    private void StartTime()
+    {
+        Time.timeScale = 1f;
     }
 }
