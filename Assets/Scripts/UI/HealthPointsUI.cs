@@ -11,7 +11,7 @@ public class HealthPointsUI : MonoBehaviour
 
     private void Update()
     {
-        healthPointsText.text = "חהמנמגüו: " + Convert.ToString(heroHealthObject.GetComponent<HealthPoints>().GetHealth());
+        healthPointsText.text = "Çהמנמגüו: " + Convert.ToString(heroHealthObject.GetComponent<HealthPoints>().GetHealth());
     }
 
 
