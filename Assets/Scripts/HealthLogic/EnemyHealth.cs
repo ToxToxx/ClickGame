@@ -5,6 +5,9 @@ using UnityEngine;
 public class EnemyHealth : HealthPoints
 {
     private int enemyDeathCounter;
+    [SerializeField] private int healthTreshold = 100;
+    [SerializeField] private int healthMultiplier = 2;
+    [SerializeField] private int healthAdder = 10;
 
     private void Start()
     {
@@ -20,13 +23,13 @@ public class EnemyHealth : HealthPoints
         if(health <= 0)
         {
             enemyDeathCounter++;
-            if(maxHealth < 100)
+            if(maxHealth < healthTreshold)
             {
-                maxHealth = maxHealth * 2;
+                maxHealth = maxHealth * healthMultiplier;
             }
             else
             {
-                maxHealth += 10;
+                maxHealth += healthAdder;
             }
             
             health = maxHealth;

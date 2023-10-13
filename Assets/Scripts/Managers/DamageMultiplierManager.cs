@@ -5,6 +5,7 @@ using UnityEngine;
 public class DamageMultiplierManager : MonoBehaviour
 {
     [SerializeField] private int damageMultiplier;
+    [SerializeField] private int enemyDefeated = 3;
     [SerializeField] private EnemyHealth enemyObject;
     private int lastDeathCount = 0;
 
@@ -19,9 +20,9 @@ public class DamageMultiplierManager : MonoBehaviour
         int currentDeathCount = enemyObject.GetEnemyDeathCounter();
         int deathsSinceLastUpdate = currentDeathCount - lastDeathCount;
 
-        if (deathsSinceLastUpdate >= 3)
+        if (deathsSinceLastUpdate >= enemyDefeated)
         {
-            int increaseAmount = deathsSinceLastUpdate / 3;
+            int increaseAmount = deathsSinceLastUpdate / enemyDefeated;
             damageMultiplier += increaseAmount;
             lastDeathCount = currentDeathCount;
         }

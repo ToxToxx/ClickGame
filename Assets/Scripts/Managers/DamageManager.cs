@@ -43,9 +43,10 @@ public class DamageManager : MonoBehaviour
         enemyDamage += incrementor;
     }
 
-    public void MultiplyPlayerDamage(int multiplier)
+    public void MultiplyDamage(int multiplier)
     {
         playerDamage *= multiplier;
+        enemyDamage += multiplier * 2;
     }
     IEnumerator DealDamage()
     {
@@ -54,7 +55,7 @@ public class DamageManager : MonoBehaviour
             yield return new WaitForSeconds(damageTimerMax);
             damageTimer = damageTimerMax;
 
-            MultiplyPlayerDamage(damageMultiplierManager.GetDamageMultiplier());
+            MultiplyDamage(damageMultiplierManager.GetDamageMultiplier());
 
             enemyGameObject.GetComponent<HealthPoints>().TakeDamage(playerDamage);
             playerGameObject.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);  
