@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageIncrementor: 5
+  damageMultiplier: 2
+  enemyObject: {fileID: 0}
 --- !u!114 &3294551674630526859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,7 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce99ee0b3e38daa4fa219ae34960f586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 3
   minSpeed: 25
   maxSpeed: 30
   maxTorque: 5

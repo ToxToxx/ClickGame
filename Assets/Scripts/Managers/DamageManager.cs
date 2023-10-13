@@ -5,6 +5,7 @@ using UnityEngine;
 public class DamageManager : MonoBehaviour
 {
     public static DamageManager Instance;
+    [SerializeField] private DamageMultiplierManager damageMultiplierManager;
 
     [SerializeField] private GameObject enemyGameObject;
     [SerializeField] private GameObject playerGameObject;
@@ -41,14 +42,23 @@ public class DamageManager : MonoBehaviour
     {
         enemyDamage += incrementor;
     }
+
+    public void MultiplyPlayerDamage(int multiplier)
+    {
+        playerDamage *= multiplier;
+    }
     IEnumerator DealDamage()
     {
         while(true)
         {
             yield return new WaitForSeconds(damageTimerMax);
             damageTimer = damageTimerMax;
+
+            MultiplyPlayerDamage(damageMultiplierManager.GetDamageMultiplier());
+
             enemyGameObject.GetComponent<HealthPoints>().TakeDamage(playerDamage);
-            playerGameObject.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
+            playerGameObject.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);  
+            
             playerDamage = 0;
             enemyDamage = 0;
             
