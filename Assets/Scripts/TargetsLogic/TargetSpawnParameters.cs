@@ -6,7 +6,6 @@ public class TargetSpawnParameters : MonoBehaviour
 {
     private Rigidbody targetRb;
 
-    [SerializeField] private float spawnRate = 1.0f;
     [SerializeField] private float minSpeed = 12;
     [SerializeField] private float maxSpeed = 16;
     [SerializeField] private float maxTorque = 10;
