@@ -10,11 +10,16 @@ public class DamagePointsUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI enemyDamagePointsText;
     [SerializeField] private TextMeshProUGUI heroDamagePointsText;
 
+    private float heroDamagePoints;
+    private float enemyDamagePoints;
+
 
     private void Update()
     {
-        heroDamagePointsText.text = "Урон: " + damageManager.GetPlayerDamage() + " x" + damageMultiplierManager.GetDamageMultiplier();
-        enemyDamagePointsText.text = "Урон: " + damageManager.GetEnemyDamage() + " +" + damageMultiplierManager.GetDamageMultiplier();
+        heroDamagePoints = damageManager.GetPlayerDamage() * damageMultiplierManager.GetDamageMultiplier();
+        enemyDamagePoints = damageManager.GetEnemyDamage() + damageMultiplierManager.GetDamageMultiplier() * 2;
+        heroDamagePointsText.text = "Урон: " + heroDamagePoints + " (x" + damageMultiplierManager.GetDamageMultiplier() + ")";
+        enemyDamagePointsText.text = "Урон: " + enemyDamagePoints + " (+" + (damageMultiplierManager.GetDamageMultiplier() * 2) + ")";
         
     }
 }
