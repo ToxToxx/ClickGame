@@ -1000,6 +1000,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   maxHealth: 5
+  healthTreshold: 100
+  healthMultiplier: 2
+  healthAdder: 10
 --- !u!1 &454033657
 GameObject:
   m_ObjectHideFlags: 0
@@ -2552,6 +2555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a065fc995650124c813519cb7563b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMultiplierManager: {fileID: 1531865440}
   enemyGameObject: {fileID: 413918992}
   playerGameObject: {fileID: 942750055}
   playerDamage: 0
@@ -3035,6 +3039,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a654112097150479f87ae7e0a62601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMultiplier: 0
+  enemyDefeated: 3
+  enemyObject: {fileID: 413918996}
 --- !u!1 &1570796178
 GameObject:
   m_ObjectHideFlags: 0
