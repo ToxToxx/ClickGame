@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PauseUI : MonoBehaviour
 {
-    public static PauseUI Instance;
 
     private void Start()
     {
