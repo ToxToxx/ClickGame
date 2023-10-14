@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c14b946ab4973c54196d8a386c9041fa, type: 3}
   m_Name: SoundEffectsSO
   m_EditorClassIdentifier: 
-  goodTargetSound: {fileID: 0}
-  badTargetSound: {fileID: 0}
+  goodTargetSound: {fileID: 8300000, guid: 657578e4be6b64dbf9b09deada272e55, type: 3}
+  badTargetSound: {fileID: 8300000, guid: 7e26c9daf4c32483b9c2790e662d3f1b, type: 3}

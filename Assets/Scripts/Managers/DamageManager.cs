@@ -6,6 +6,7 @@ using UnityEngine;
 public class DamageManager : MonoBehaviour
 {
     public event EventHandler OnIncrementringPlayerDamage;
+    public event EventHandler OnIncrementringEnemyDamage;
 
     public static DamageManager Instance;
     [SerializeField] private DamageMultiplierManager damageMultiplierManager;
@@ -45,6 +46,7 @@ public class DamageManager : MonoBehaviour
     public void AdddingEnemyDamage(int incrementor)
     {
         enemyDamage += incrementor;
+        OnIncrementringEnemyDamage?.Invoke(this,EventArgs.Empty);
     }
 
     public void MultiplyDamage(int multiplier)
