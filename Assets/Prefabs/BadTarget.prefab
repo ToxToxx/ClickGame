@@ -101,7 +101,7 @@ MonoBehaviour:
   minSpeed: 25
   maxSpeed: 30
   maxTorque: 5
-  xRange: 5
+  xRange: 4
 --- !u!114 &4173334076829722570
 MonoBehaviour:
   m_ObjectHideFlags: 0
