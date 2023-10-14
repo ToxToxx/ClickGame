@@ -18,13 +18,14 @@ public class AudioManager : MonoBehaviour
             if(isAudioOn)
             {
                 audioSource.volume = 0;
-                audioButtonText.text = "Звук: выкл";
+                audioButtonText.text = "Музыка: выкл";
                 isAudioOn = false;
             }
             else 
             {
                 audioSource.volume = 1;
-                audioButtonText.text = "Звук: вкл";
+                audioButtonText.text = "Музыка: вкл";
+                isAudioOn = true;
             }
         });
     }
