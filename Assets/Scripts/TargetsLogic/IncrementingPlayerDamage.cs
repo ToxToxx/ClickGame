@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class IncrementingPlayerDamage : MonoBehaviour
 {
-    
-
     [SerializeField] private int damageIncrementor;
 
 
