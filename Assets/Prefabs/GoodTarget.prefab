@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4483079014942048149}
   - component: {fileID: 3294551674630526859}
   - component: {fileID: -7971613997713262182}
+  - component: {fileID: -2171006649316741739}
   m_Layer: 0
   m_Name: GoodTarget
   m_TagString: Untagged
@@ -98,8 +99,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageIncrementor: 5
-  damageMultiplier: 2
-  enemyObject: {fileID: 0}
 --- !u!114 &3294551674630526859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +127,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7057b776a1b4d409d254f046bcd007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2171006649316741739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688810041290498976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35cc862e65bba584cabf66fd4a2f1761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionParticle: {fileID: 7303472089845130122, guid: 6cbc21f5e9162483993a2b84b14d5ac8,
+    type: 3}
 --- !u!1001 &6745533483398061680
 PrefabInstance:
   m_ObjectHideFlags: 0

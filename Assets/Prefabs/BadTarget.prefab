@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1829765434826712876}
   - component: {fileID: 4173334076829722570}
   - component: {fileID: -3565178221006021947}
+  - component: {fileID: 6119906120265465212}
   m_Layer: 0
   m_Name: BadTarget
   m_TagString: Untagged
@@ -97,7 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce99ee0b3e38daa4fa219ae34960f586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 3
   minSpeed: 25
   maxSpeed: 30
   maxTorque: 5
@@ -127,6 +127,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamage: 5
+--- !u!114 &6119906120265465212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6565879221160796710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35cc862e65bba584cabf66fd4a2f1761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionParticle: {fileID: 2088871590894813759, guid: 745208c9d6e104225bd99e1ab894e3bb,
+    type: 3}
 --- !u!1001 &8668417655972738249
 PrefabInstance:
   m_ObjectHideFlags: 0
