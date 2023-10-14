@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DamageManager : MonoBehaviour
 {
+    public event EventHandler OnIncrementringPlayerDamage;
+
     public static DamageManager Instance;
     [SerializeField] private DamageMultiplierManager damageMultiplierManager;
 
@@ -37,6 +40,7 @@ public class DamageManager : MonoBehaviour
     public void AdddingPlayerDamage(int incrementor)
     {
         playerDamage += incrementor;
+        OnIncrementringPlayerDamage?.Invoke(this, EventArgs.Empty);
     }
     public void AdddingEnemyDamage(int incrementor)
     {
