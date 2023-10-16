@@ -39,7 +39,7 @@ public class BattleManager : MonoBehaviour
     {
         Time.timeScale = 0f;
     }
-    private void StartTime()
+    public void StartTime()
     {
         Time.timeScale = 1f;
     }

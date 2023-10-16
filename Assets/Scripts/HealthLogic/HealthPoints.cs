@@ -28,5 +28,13 @@ public class HealthPoints : MonoBehaviour
         return health;
     }
 
+    public void SetHealth(int healthAmount)
+    {
+        health = healthAmount;
+    }
+    public int GetMaxHealth()
+    {
+        return maxHealth;
+    }
 
 }
