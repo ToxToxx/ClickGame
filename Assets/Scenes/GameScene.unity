@@ -1991,9 +1991,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1212eaf0708914f829af1b26db366a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoundButton: {fileID: 1412621709}
-  SoundButtonText: {fileID: 148245139}
-  audioClipRefsSO: {fileID: 11400000, guid: 49f8b050210d2cb4f94c024b9c51c04a, type: 2}
+  _soundButton: {fileID: 1412621709}
+  _soundButtonText: {fileID: 148245139}
+  _audioClipRefsSO: {fileID: 11400000, guid: 49f8b050210d2cb4f94c024b9c51c04a, type: 2}
 --- !u!1001 &745347707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3116,10 +3116,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1c0a38d5dd63aa4f94f65b9409d426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sdk: {fileID: 368614225}
-  playerHealth: {fileID: 942750057}
-  battleManager: {fileID: 1976070836}
-  loseScreenUI: {fileID: 175350897}
+  _sdk: {fileID: 368614225}
+  _playerHealth: {fileID: 942750057}
+  _battleManager: {fileID: 1976070836}
+  _loseScreenUI: {fileID: 175350897}
 --- !u!1 &1064410307
 GameObject:
   m_ObjectHideFlags: 0
@@ -3829,7 +3829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74a2c6ff1492924085140779600e7f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyObject: {fileID: 413918996}
+  _enemyObject: {fileID: 413918996}
 --- !u!1 &1317621086
 GameObject:
   m_ObjectHideFlags: 0
@@ -4370,7 +4370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 0
-  _enemyDefeated: 0
+  _enemyDefeatedCoef: 3
   _enemyObject: {fileID: 413918996}
 --- !u!1 &1552919853
 GameObject:
