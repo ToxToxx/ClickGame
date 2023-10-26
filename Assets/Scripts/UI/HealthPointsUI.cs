@@ -1,19 +1,18 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class HealthPointsUI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI healthPointsText;
-    [SerializeField] private GameObject heroHealthObject;
+    [FormerlySerializedAs("healthPointsText")]
+    [SerializeField] private TextMeshProUGUI _healthPointsText;
+
+    [FormerlySerializedAs("heroHealthObject")]
+    [SerializeField] private GameObject _heroHealthObject;
 
     private void Update()
     {
-        healthPointsText.text = "Çהמנמגüו: " + Convert.ToString(heroHealthObject.GetComponent<HealthPoints>().GetHealth());
+        _healthPointsText.text = "Çהמנמגüו: " + Convert.ToString(_heroHealthObject.GetComponent<HealthPoints>().GetHealth());
     }
-
-
-
 }

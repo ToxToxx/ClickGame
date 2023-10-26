@@ -1,14 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class LoseScreenUI : MonoBehaviour
+public class LoseScreenUI : MonoBehaviour, IUserInterfaceWindow
 {
-    [SerializeField] private BattleManager battleManager;
+    [FormerlySerializedAs("battleManager")]
+    [SerializeField] private BattleManager _battleManager;
+
     void Start()
     {
         Hide();
-        battleManager.OnGameLost += BattleManager_OnGameLost;
+        _battleManager.OnGameLost += BattleManager_OnGameLost;
     }
 
     private void BattleManager_OnGameLost(object sender, System.EventArgs e)

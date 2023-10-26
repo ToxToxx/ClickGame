@@ -1,13 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class EnemySpellUI : MonoBehaviour
 {
-    [SerializeField] private GameObject enemySpell;
-    [SerializeField] private TextMeshProUGUI enemySpellText;
-    private float timerRange = 0.9f;
+    [FormerlySerializedAs("enemySpell")]
+    [SerializeField] private GameObject _enemySpell;
+
+    [FormerlySerializedAs("enemySpellText")]
+    [SerializeField] private TextMeshProUGUI _enemySpellText;
+
+    private readonly float timerRange = 0.9f;
 
     void Start()
     {
@@ -16,7 +19,7 @@ public class EnemySpellUI : MonoBehaviour
 
     private void Update()
     {
-        if(enemySpell.GetComponent<GrabAndDealSpell>().GetAttackTimerNormalized() > timerRange)
+        if(_enemySpell.GetComponent<GrabAndDealSpell>().GetAttackTimerNormalized() > timerRange)
         {
             ShowSpellUI();
         }
@@ -27,11 +30,11 @@ public class EnemySpellUI : MonoBehaviour
     }
     private void HideSpellUI()
     {
-        enemySpellText.text = " ";
+        _enemySpellText.text = " ";
     }
     private void ShowSpellUI()
     {
-        enemySpellText.text = "’¬¿“¿…";
+        _enemySpellText.text = "’¬¿“¿…";
     }
 
 }

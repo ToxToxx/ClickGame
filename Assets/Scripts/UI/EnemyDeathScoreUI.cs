@@ -1,15 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class EnemyDeathScoreUI : MonoBehaviour
 {
-    [SerializeField] private EnemyHealth enemyObject;
-    [SerializeField] private TextMeshProUGUI enemyDeathText;
+    [FormerlySerializedAs("enemyObject")]
+    [SerializeField] private EnemyHealth _enemyObject;
+
+    [FormerlySerializedAs("enemyDeathText")]
+    [SerializeField] private TextMeshProUGUI _enemyDeathText;
 
     private void Update()
     {
-        enemyDeathText.text = "Побеждено: " + enemyObject.GetEnemyDeathCounter();
+        _enemyDeathText.text = "Побеждено: " + _enemyObject.GetEnemyDeathCounter();
     }
 }
