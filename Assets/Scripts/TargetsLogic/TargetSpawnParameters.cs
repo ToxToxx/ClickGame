@@ -20,12 +20,6 @@ public class TargetSpawnParameters : MonoBehaviour
 
     }
 
-
-    void Update()
-    {
-        
-    }
-
     private Vector3 RandomForce()
     {
         return Vector3.up * Random.Range(minSpeed, maxSpeed);
@@ -38,6 +32,6 @@ public class TargetSpawnParameters : MonoBehaviour
 
     private Vector3 RandomSpawnPos()
     {
-        return new Vector3(Random.Range(-xRange, xRange), SpawnManager.Instance.transform.position.y);
+        return new Vector3(Random.Range(-xRange, xRange), SpawnManagerAbstractFactory.Instance.transform.position.y);
     }
 }
