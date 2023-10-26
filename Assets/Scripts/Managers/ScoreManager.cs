@@ -1,12 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] private EnemyHealth enemyObject;
+    [FormerlySerializedAs("enemyObject")]
+    [SerializeField] private EnemyHealth _enemyObject;
 
-    private float bestScore;
+    private float _bestScore;
 
     void Start()
     {
@@ -20,26 +20,26 @@ public class ScoreManager : MonoBehaviour
 
     private void SetBestScore()
     {
-        float currentScore = enemyObject.GetEnemyDeathCounter();
-        if (currentScore > bestScore)
+        float currentScore = _enemyObject.GetEnemyDeathCounter();
+        if (currentScore > _bestScore)
         {
-            bestScore = currentScore;
+            _bestScore = currentScore;
             SaveBestScore();
         }
     }
 
     public float GetBestScore()
     {
-        return bestScore;
+        return _bestScore;
     }
 
     private void SaveBestScore()
     {
-        PlayerPrefs.SetFloat("BestScore", bestScore);
+        PlayerPrefs.SetFloat("BestScore", _bestScore);
     }
 
     private void LoadBestScore()
     {
-        bestScore = PlayerPrefs.GetFloat("BestScore", 0);
+        _bestScore = PlayerPrefs.GetFloat("BestScore", 0);
     }
 }

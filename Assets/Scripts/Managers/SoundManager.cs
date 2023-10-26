@@ -2,32 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] private Button SoundButton;
-    [SerializeField] private TextMeshProUGUI SoundButtonText;
-    [SerializeField] private SoundEffectsSO audioClipRefsSO;
+    [FormerlySerializedAs("SoundButton")]
+    [SerializeField] private Button _soundButton;
+
+    [FormerlySerializedAs("SoundButtonText")]
+    [SerializeField] private TextMeshProUGUI _soundButtonText;
+
+    [FormerlySerializedAs("audioClipRefsSO")]
+    [SerializeField] private SoundEffectsSO _audioClipRefsSO;
 
 
-    private bool isSoundOn = true;
-    private float volume = 1.0f;
+    private bool _isSoundOn = true;
+    private float _volume = 1.0f;
+
     private void Awake()
     {
-        SoundButton.onClick.AddListener(() =>
+        _soundButton.onClick.AddListener(() =>
         {
-            if (isSoundOn)
+            if (_isSoundOn)
             {
-                volume = 0.0f;
-                SoundButtonText.text = "Звуки: выкл";
-                isSoundOn = false;
+                _volume = 0.0f;
+                _soundButtonText.text = "Звуки: выкл";
+                _isSoundOn = false;
             }
             else
             {
-                volume = 1f;
-                SoundButtonText.text = "Звуки: вкл";
-                isSoundOn = true;
+                _volume = 1f;
+                _soundButtonText.text = "Звуки: вкл";
+                _isSoundOn = true;
             }
         });
     }
@@ -39,17 +46,17 @@ public class SoundManager : MonoBehaviour
 
     private void DamageManager_OnIncrementringPlayerDamage(object sender, System.EventArgs e)
     {
-        PlaySound(audioClipRefsSO.goodTargetSound, transform.position);
+        PlaySound(_audioClipRefsSO.goodTargetSound, transform.position);
     }
 
     private void DamageManager_OnIncrementringEnemyDamage(object sender, System.EventArgs e)
     {
-        PlaySound(audioClipRefsSO.badTargetSound, transform.position);
+        PlaySound(_audioClipRefsSO.badTargetSound, transform.position);
     }
 
     private void PlaySound(AudioClip audioClip, Vector3 position, float volumeMultiplier = 100f)
     {
-        AudioSource.PlayClipAtPoint(audioClip, position, volumeMultiplier * volume);
+        AudioSource.PlayClipAtPoint(audioClip, position, volumeMultiplier * _volume);
     }
     private void OnDestroy()
     {
