@@ -9,7 +9,7 @@ public class BattleManager : MonoBehaviour
     
     private int WonCounter;
 
-
+    [SerializeField] private PlayerHealth _playerHealth;
     [SerializeField] private GameObject playerGameObject;
     [SerializeField] private GameObject enemyGameObject;
     private void Awake()
@@ -30,7 +30,7 @@ public class BattleManager : MonoBehaviour
             StopTime();
         } else if (enemyGameObject.GetComponent<EnemyHealth>().GetEnemyDeathCounter() != WonCounter)
         {
-            PlayerHealth.Instance.HealHealth();
+            _playerHealth.HealHealth();
             WonCounter = enemyGameObject.GetComponent<EnemyHealth>().GetEnemyDeathCounter();
         }
     }

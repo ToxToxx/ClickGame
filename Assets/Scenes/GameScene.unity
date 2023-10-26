@@ -1317,11 +1317,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df88d439bd4b2c4680b087c039417a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
-  maxHealth: 5
-  healthTreshold: 100
-  healthMultiplier: 2
-  healthAdder: 10
+  _health: 5
+  _maxHealth: 5
+  _healthTreshold: 100
+  _healthMultiplier: 2
+  _healthAdder: 10
 --- !u!1001 &442313923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2863,8 +2863,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf316cb6b2dc884cb056bc00d2be1b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 100
+  _health: 0
+  _maxHealth: 100
 --- !u!1 &977663618
 GameObject:
   m_ObjectHideFlags: 0
@@ -5716,6 +5716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4da990003e237489e01d17734668fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerHealth: {fileID: 942750057}
   looseObjectDamage: 5
 --- !u!1 &1976070834
 GameObject:
@@ -5761,6 +5762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b069252dc3a425438bab30777dcb013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerHealth: {fileID: 942750057}
   playerGameObject: {fileID: 942750055}
   enemyGameObject: {fileID: 413918992}
 --- !u!224 &2050419238 stripped

@@ -1,40 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class HealthPoints : MonoBehaviour
 {
-    [SerializeField] protected int health;
-    [SerializeField] protected int maxHealth;
+    [FormerlySerializedAs("health")]
+    [SerializeField] protected int _health;
+
+    [FormerlySerializedAs("maxHealth")]
+    [SerializeField] protected int _maxHealth;
 
     private void Start()
     {
-        health = maxHealth;
+        _health = _maxHealth;
     }
     private void Update()
     {
-        if (health <= 0)
+        if (_health <= 0)
         {
-            health = 0;
+            _health = 0;
         }
     }
     public void TakeDamage(int damageAmount)
     {         
-        health -= damageAmount;
+        _health -= damageAmount;
     }
 
     public int GetHealth() 
     { 
-        return health;
+        return _health;
     }
 
     public void SetHealth(int healthAmount)
     {
-        health = healthAmount;
+        _health = healthAmount;
     }
     public int GetMaxHealth()
     {
-        return maxHealth;
+        return _maxHealth;
     }
 
 }

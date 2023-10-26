@@ -1,17 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class EnemyHealth : HealthPoints
+public sealed class EnemyHealth : HealthPoints
 {
-    private int enemyDeathCounter;
-    [SerializeField] private int healthTreshold = 100;
-    [SerializeField] private int healthMultiplier = 2;
-    [SerializeField] private int healthAdder = 10;
+    private int _enemyDeathCounter;
+
+    [FormerlySerializedAs("healthTreshold")]
+    [SerializeField] private int _healthTreshold = 100;
+
+    [FormerlySerializedAs("healthMultiplier")]
+    [SerializeField] private int _healthMultiplier = 2;
+
+    [FormerlySerializedAs("healthAdder")] 
+    [SerializeField] private int _healthAdder = 10;
 
     private void Start()
     {
-        enemyDeathCounter = 0;
+        _enemyDeathCounter = 0;
     }
     private void Update()
     {
@@ -20,24 +25,24 @@ public class EnemyHealth : HealthPoints
 
     private void IncreaseHealth()
     {
-        if(health <= 0)
+        if(_health <= 0)
         {
-            enemyDeathCounter++;
-            if(maxHealth < healthTreshold)
+            _enemyDeathCounter++;
+            if(_maxHealth < _healthTreshold)
             {
-                maxHealth = maxHealth * healthMultiplier;
+                _maxHealth *= _healthMultiplier;
             }
             else
             {
-                maxHealth += healthAdder;
+                _maxHealth += _healthAdder;
             }
             
-            health = maxHealth;
+            _health = _maxHealth;
         }
     }
 
     public int GetEnemyDeathCounter()
     {
-        return enemyDeathCounter;
+        return _enemyDeathCounter;
     }
 }
