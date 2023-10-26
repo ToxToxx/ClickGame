@@ -33,4 +33,9 @@ public class SpawnManagerAbstractFactory : MonoBehaviour
             _targetFactories[index].CreateTarget();
         }
     }
+
+    private void OnDestroy()
+    {
+        _targetFactories.Clear();
+    }
 }

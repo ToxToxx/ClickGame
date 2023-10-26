@@ -1,14 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class TargetParticle : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem explosionParticle;
+    [FormerlySerializedAs("explosionParticle")]
+    [SerializeField] private ParticleSystem _explosionParticle;
 
     void OnDisable()
     {
         if (!this.gameObject.scene.isLoaded) return;
-        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+        Instantiate(_explosionParticle, transform.position, _explosionParticle.transform.rotation);
     }
 }
