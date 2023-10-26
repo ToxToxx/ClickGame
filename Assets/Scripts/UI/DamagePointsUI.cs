@@ -1,25 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class DamagePointsUI : MonoBehaviour
 {
-    [SerializeField] private DamageManager damageManager;
-    [SerializeField] private DamageMultiplierManager damageMultiplierManager;
-    [SerializeField] private TextMeshProUGUI enemyDamagePointsText;
-    [SerializeField] private TextMeshProUGUI heroDamagePointsText;
+    [FormerlySerializedAs("damageManager")]
+    [SerializeField] private DamageManager _damageManager;
 
-    private float heroDamagePoints;
-    private float enemyDamagePoints;
+    [FormerlySerializedAs("damageMultiplierManager")]
+    [SerializeField] private DamageMultiplierManager _damageMultiplierManager;
+
+    [FormerlySerializedAs("enemyDamagePointsText")]
+    [SerializeField] private TextMeshProUGUI _enemyDamagePointsText;
+
+    [FormerlySerializedAs("heroDamagePointsText")]
+    [SerializeField] private TextMeshProUGUI _heroDamagePointsText;
+
+    private float _heroDamagePoints;
+    private float _enemyDamagePoints;
 
 
     private void Update()
     {
-        heroDamagePoints = damageManager.GetPlayerDamage() * damageMultiplierManager.GetDamageMultiplier();
-        enemyDamagePoints = damageManager.GetEnemyDamage() + damageMultiplierManager.GetDamageMultiplier() * 2;
-        heroDamagePointsText.text = "Урон: " + heroDamagePoints + " (x" + damageMultiplierManager.GetDamageMultiplier() + ")";
-        enemyDamagePointsText.text = "Урон: " + enemyDamagePoints + " (+" + (damageMultiplierManager.GetDamageMultiplier() * 2) + ")";
+        _heroDamagePoints = _damageManager.GetPlayerDamage() * _damageMultiplierManager.GetDamageMultiplier();
+        _enemyDamagePoints = _damageManager.GetEnemyDamage() + _damageMultiplierManager.GetDamageMultiplier() * 2;
+        _heroDamagePointsText.text = "Урон: " + _heroDamagePoints + " (x" + _damageMultiplierManager.GetDamageMultiplier() + ")";
+        _enemyDamagePointsText.text = "Урон: " + _enemyDamagePoints + " (+" + (_damageMultiplierManager.GetDamageMultiplier() * 2) + ")";
         
     }
 }

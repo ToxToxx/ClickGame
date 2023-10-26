@@ -1,16 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.Serialization;
 
 public class BestScoreUI : MonoBehaviour
 {
-    [SerializeField] private ScoreManager scoreManager;
-    [SerializeField] private TextMeshProUGUI bestScoreText;
+    [FormerlySerializedAs("scoreManager")]
+    [SerializeField] private ScoreManager _scoreManager;
+
+    [FormerlySerializedAs("bestScoreText")]
+    [SerializeField] private TextMeshProUGUI _bestScoreText;
 
     void Update()
     {        
-        bestScoreText.text = "Рекорд: " + scoreManager.GetBestScore();
+        _bestScoreText.text = "Рекорд: " + _scoreManager.GetBestScore();
     }       
 }
