@@ -1,56 +1,59 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GrabAndDealSpell : MonoBehaviour
 {
-    private int objectsIncrement;
-    [SerializeField] private float spellCooldown;
-    [SerializeField] private int damageOfSpell;
-    private float timerOfSpell;
+    [FormerlySerializedAs("spellCooldown")]
+    [SerializeField] private float _spellCooldown;
+
+    [FormerlySerializedAs("damageOfSpell")]
+    [SerializeField] private int _damageOfSpell;
+
+    private int _objectsIncrement;
+    private float _timerOfSpell;
 
     void Start()
     {
-        objectsIncrement = 0;
+        _objectsIncrement = 0;
         StartCoroutine(GrabAndDeal());
     }
     private void Update()
     {
-        timerOfSpell -= Time.deltaTime;
+        _timerOfSpell -= Time.deltaTime;
     }
 
     IEnumerator GrabAndDeal()
     {
         while (true)
         {
-            yield return new WaitForSeconds(spellCooldown);
+            yield return new WaitForSeconds(_spellCooldown);
             try
             {         
                 DealingPlayerDamage[] objectsToDestroy = FindObjectsOfType<DealingPlayerDamage>();
                 foreach (DealingPlayerDamage obj in objectsToDestroy)
                 {
                     Destroy(obj.gameObject);
-                    objectsIncrement++;
+                    _objectsIncrement++;
                 }              
             }
             catch
             {
 
             }
-            timerOfSpell = spellCooldown;
-            DamageManager.Instance.AdddingEnemyDamage(damageOfSpell * objectsIncrement);
-            objectsIncrement = 0;
+            _timerOfSpell = _spellCooldown;
+            DamageManager.Instance.AdddingEnemyDamage(_damageOfSpell * _objectsIncrement);
+            _objectsIncrement = 0;
         }
         
     }
 
     public float GetSpellCooldown()
     {
-        return spellCooldown;
+        return _spellCooldown;
     }
     public float GetAttackTimerNormalized()
     {
-        return 1 - (timerOfSpell / spellCooldown);
+        return 1 - (_timerOfSpell / _spellCooldown);
     }
 }

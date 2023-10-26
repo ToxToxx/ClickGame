@@ -1,13 +1,12 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Border : MonoBehaviour
 {
     [SerializeField] private PlayerHealth _playerHealth;
 
-    [SerializeField] private int looseObjectDamage;
+    [FormerlySerializedAs("looseObjectDamage")]
+    [SerializeField] private int _looseObjectDamage;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,9 +14,7 @@ public class Border : MonoBehaviour
 
         if (other.gameObject.GetComponent<IncrementingPlayerDamage>())
         {
-            _playerHealth.TakeDamage(looseObjectDamage);
+            _playerHealth.TakeDamage(_looseObjectDamage);
         }
     }
-
-
 }

@@ -1,33 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class GameInput : MonoBehaviour
 {
-    private PlayerInputActions playerInputActions;
-    private Camera mainCamera;
+    private PlayerInputActions _playerInputActions;
+    private Camera _mainCamera;
 
     private void Awake()
     {
-        playerInputActions = new PlayerInputActions();
-        mainCamera = Camera.main;
+        _playerInputActions = new PlayerInputActions();
+        _mainCamera = Camera.main;
         
     }
 
     private void OnEnable()
     {
-        playerInputActions.Enable();
+        _playerInputActions.Enable();
     }
 
     private void OnDisable()
     {
-        playerInputActions.Disable();
+        _playerInputActions.Disable();
     }
 
     private void Start()
     {
-        playerInputActions.Player.Click.performed += _ => EndedCLick();
+        _playerInputActions.Player.Click.performed += _ => EndedCLick();
     }
     private void EndedCLick()
     {
@@ -36,7 +33,7 @@ public class GameInput : MonoBehaviour
 
     private void DetectAndDestroyFlyingTarget()
     {
-        Ray ray = mainCamera.ScreenPointToRay(playerInputActions.Player.Position.ReadValue<Vector2>());
+        Ray ray = _mainCamera.ScreenPointToRay(_playerInputActions.Player.Position.ReadValue<Vector2>());
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
