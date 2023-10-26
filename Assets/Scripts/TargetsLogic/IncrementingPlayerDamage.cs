@@ -1,16 +1,15 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class IncrementingPlayerDamage : MonoBehaviour
 {
-    [SerializeField] private int damageIncrementor;
+    [FormerlySerializedAs("damageIncrementor")]
+    [SerializeField] private int _damageIncrementor;
 
 
     public void IncrementValue()
     {      
-        DamageManager.Instance.AdddingPlayerDamage(damageIncrementor);
+        DamageManager.Instance.AdddingPlayerDamage(_damageIncrementor);
     }
 }
 

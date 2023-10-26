@@ -1,14 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class DealingPlayerDamage : MonoBehaviour
 {
-    [SerializeField] private int enemyDamage;
+    [FormerlySerializedAs("enemyDamage")]
+    [SerializeField] private int _enemyDamage;
 
     public void DealPlayerDamage()
     {
-        DamageManager.Instance.AdddingEnemyDamage(enemyDamage);
+        DamageManager.Instance.AdddingEnemyDamage(_enemyDamage);
     }
 }
 

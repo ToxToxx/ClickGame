@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class AttackTimerUI : MonoBehaviour
 {
-    [SerializeField] private Image timerImage;
+    [FormerlySerializedAs("timerImage")]
+    [SerializeField] private Image _timerImage;
 
     private void Update()
     {
-       timerImage.fillAmount = DamageManager.Instance.GetAttackTimerNormalized();
+       _timerImage.fillAmount = DamageManager.Instance.GetAttackTimerNormalized();
     }
 }
