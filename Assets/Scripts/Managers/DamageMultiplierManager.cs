@@ -1,35 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class DamageMultiplierManager : MonoBehaviour
 {
-    [SerializeField] private int damageMultiplier;
-    [SerializeField] private int enemyDefeated = 3;
-    [SerializeField] private EnemyHealth enemyObject;
-    private int lastDeathCount = 0;
+    [FormerlySerializedAs("damageMultiplier")]
+    [SerializeField] private int _damageMultiplier;
+
+    [FormerlySerializedAs("enemyDefeated")]
+    [SerializeField] private int _enemyDefeatedCoef = 3;
+
+    [FormerlySerializedAs("enemyObject")]
+    [SerializeField] private EnemyHealth _enemyObject;
+
+    private int _lastDeathCount = 0;
+    private int _increaseAmount;
 
     private void Start()
     {
-        damageMultiplier = 1;
-        lastDeathCount = enemyObject.GetEnemyDeathCounter();
+        _damageMultiplier = 1;
+        _lastDeathCount = _enemyObject.GetEnemyDeathCounter();
     }
 
     private void Update()
     {
-        int currentDeathCount = enemyObject.GetEnemyDeathCounter();
-        int deathsSinceLastUpdate = currentDeathCount - lastDeathCount;
+        int currentDeathCount = _enemyObject.GetEnemyDeathCounter();
+        int deathsSinceLastUpdate = currentDeathCount - _lastDeathCount;
 
-        if (deathsSinceLastUpdate >= enemyDefeated)
+        if (deathsSinceLastUpdate >= _enemyDefeatedCoef)
         {
-            int increaseAmount = deathsSinceLastUpdate / enemyDefeated;
-            damageMultiplier += increaseAmount;
-            lastDeathCount = currentDeathCount;
+            _increaseAmount = deathsSinceLastUpdate / _enemyDefeatedCoef;
+            _damageMultiplier += _increaseAmount;
+
+            _lastDeathCount = currentDeathCount;
         }
     }
 
     public int GetDamageMultiplier()
     {
-        return damageMultiplier;
+        return _damageMultiplier;
     }
 }

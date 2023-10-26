@@ -1,31 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private Button audioButton;
-    [SerializeField] private TextMeshProUGUI audioButtonText;
-    private AudioSource audioSource;
-    private bool isAudioOn = true;
+    [FormerlySerializedAs("audioButton")]
+    [SerializeField] private Button _audioButton;
+
+    [FormerlySerializedAs("audioButtonText")]
+    [SerializeField] private TextMeshProUGUI _audioButtonText;
+
+    private AudioSource _audioSource;
+    private bool _isAudioOn = true;
+
     private void Awake()
     {  
-        audioSource = GetComponent<AudioSource>();
-        audioButton.onClick.AddListener(() =>
+        _audioSource = GetComponent<AudioSource>();
+        _audioButton.onClick.AddListener(() =>
         {
-            if(isAudioOn)
+            if(_isAudioOn)
             {
-                audioSource.volume = 0;
-                audioButtonText.text = "Музыка: выкл";
-                isAudioOn = false;
+                _audioSource.volume = 0;
+                _audioButtonText.text = "Музыка: выкл";
+                _isAudioOn = false;
             }
             else 
             {
-                audioSource.volume = 1;
-                audioButtonText.text = "Музыка: вкл";
-                isAudioOn = true;
+                _audioSource.volume = 1;
+                _audioButtonText.text = "Музыка: вкл";
+                _isAudioOn = true;
             }
         });
     }

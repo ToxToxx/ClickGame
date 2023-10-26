@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class DamageManager : MonoBehaviour
 {
@@ -9,17 +9,21 @@ public class DamageManager : MonoBehaviour
     public event EventHandler OnIncrementringEnemyDamage;
 
     public static DamageManager Instance;
-    [SerializeField] private DamageMultiplierManager damageMultiplierManager;
 
-    [SerializeField] private GameObject enemyGameObject;
-    [SerializeField] private GameObject playerGameObject;
+    [FormerlySerializedAs("damageMultiplierManager")]
+    [SerializeField] private DamageMultiplierManager _damageMultiplierManager;
 
-    [SerializeField] private int playerDamage;
-    [SerializeField] private int enemyDamage;
+    [FormerlySerializedAs("enemyGameObject")]
+    [SerializeField] private GameObject _enemyGameObject;
 
-    private float damageTimer;
-    [SerializeField] private float damageTimerMax = 10f;
+    [FormerlySerializedAs("playerGameObject")]
+    [SerializeField] private GameObject _playerGameObject;
 
+    [SerializeField] private int _playerDamage;
+    [SerializeField] private int _enemyDamage;
+
+    private readonly float _damageTimerMax = 10f;
+    private float _damageTimer;
 
     private void Awake()
     {
@@ -29,59 +33,59 @@ public class DamageManager : MonoBehaviour
 
     private void Start()
     {
-        damageTimer = damageTimerMax;
-        playerDamage = 0;
-        enemyDamage = 0;
+        _damageTimer = _damageTimerMax;
+        _playerDamage = 0;
+        _enemyDamage = 0;
         StartCoroutine(DealDamage());
     }
     private void Update()
     {
-        damageTimer -= Time.deltaTime;
+        _damageTimer -= Time.deltaTime;
     }
     public void AdddingPlayerDamage(int incrementor)
     {
-        playerDamage += incrementor;
+        _playerDamage += incrementor;
         OnIncrementringPlayerDamage?.Invoke(this, EventArgs.Empty);
     }
     public void AdddingEnemyDamage(int incrementor)
     {
-        enemyDamage += incrementor;
+        _enemyDamage += incrementor;
         OnIncrementringEnemyDamage?.Invoke(this,EventArgs.Empty);
     }
 
     public void MultiplyDamage(int multiplier)
     {
-        playerDamage *= multiplier;
-        enemyDamage += multiplier * 2;
+        _playerDamage *= multiplier;
+        _enemyDamage += multiplier * 2;
     }
     IEnumerator DealDamage()
     {
         while(true)
         {
-            yield return new WaitForSeconds(damageTimerMax);
-            damageTimer = damageTimerMax;
+            yield return new WaitForSeconds(_damageTimerMax);
+            _damageTimer = _damageTimerMax;
 
-            MultiplyDamage(damageMultiplierManager.GetDamageMultiplier());
+            MultiplyDamage(_damageMultiplierManager.GetDamageMultiplier());
 
-            enemyGameObject.GetComponent<HealthPoints>().TakeDamage(playerDamage);
-            playerGameObject.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);  
+            _enemyGameObject.GetComponent<HealthPoints>().TakeDamage(_playerDamage);
+            _playerGameObject.GetComponent<PlayerHealth>().TakeDamage(_enemyDamage);  
             
-            playerDamage = 0;
-            enemyDamage = 0;
+            _playerDamage = 0;
+            _enemyDamage = 0;
             
         }
     }
     public int GetPlayerDamage()
     {
-        return playerDamage;
+        return _playerDamage;
     }
     public int GetEnemyDamage()
     {
-        return enemyDamage;
+        return _enemyDamage;
     }
 
     public float GetAttackTimerNormalized()
     {
-        return 1 - (damageTimer / damageTimerMax);
+        return 1 - (_damageTimer / _damageTimerMax);
     }
 }

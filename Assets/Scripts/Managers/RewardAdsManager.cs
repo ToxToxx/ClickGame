@@ -1,25 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using YG;
-using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 public class RewardAdsManager : MonoBehaviour
 {
-    [SerializeField] private YandexGame sdk;
-    [SerializeField] private PlayerHealth playerHealth;
-    [SerializeField] private BattleManager battleManager;
-    [SerializeField] private LoseScreenUI loseScreenUI;
+    [FormerlySerializedAs("sdk")]
+    [SerializeField] private YandexGame _sdk;
+
+    [FormerlySerializedAs("playerHealth")]
+    [SerializeField] private PlayerHealth _playerHealth;
+
+    [FormerlySerializedAs("battleManager")]
+    [SerializeField] private BattleManager _battleManager;
+
+    [FormerlySerializedAs("loseScreenUI")]
+    [SerializeField] private LoseScreenUI _loseScreenUI;
  
     public void AdButton()
     {
-        sdk._RewardedShow(1);
+        _sdk._RewardedShow(1);
     }
 
     public void AdButtonCul()
     {
-        playerHealth.SetHealth(playerHealth.GetMaxHealth());
-        loseScreenUI.Hide();
-        battleManager.StartTime();
+        _playerHealth.SetHealth(_playerHealth.GetMaxHealth());
+        _loseScreenUI.Hide();
+        _battleManager.StartTime();
     }
 }

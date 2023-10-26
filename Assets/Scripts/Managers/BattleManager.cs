@@ -1,21 +1,25 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BattleManager : MonoBehaviour
 {
     public event EventHandler OnGameLost;
     
-    private int WonCounter;
+    private int _wonCounter;
 
     [SerializeField] private PlayerHealth _playerHealth;
-    [SerializeField] private GameObject playerGameObject;
-    [SerializeField] private GameObject enemyGameObject;
+
+    [FormerlySerializedAs("playerGameObject")]
+    [SerializeField] private GameObject _playerGameObject;
+
+    [FormerlySerializedAs("enemyGameObject")]
+    [SerializeField] private GameObject _enemyGameObject;
+
     private void Awake()
     {
         StartTime();
-        WonCounter = enemyGameObject.GetComponent<EnemyHealth>().GetEnemyDeathCounter();
+        _wonCounter = _enemyGameObject.GetComponent<EnemyHealth>().GetEnemyDeathCounter();
     }
     void Update()
     {
@@ -24,14 +28,14 @@ public class BattleManager : MonoBehaviour
 
     private void GameOver()
     {
-        if (playerGameObject.GetComponent<HealthPoints>().GetHealth() <= 0)
+        if (_playerGameObject.GetComponent<HealthPoints>().GetHealth() <= 0)
         {
             OnGameLost?.Invoke(this, EventArgs.Empty);
             StopTime();
-        } else if (enemyGameObject.GetComponent<EnemyHealth>().GetEnemyDeathCounter() != WonCounter)
+        } else if (_enemyGameObject.GetComponent<EnemyHealth>().GetEnemyDeathCounter() != _wonCounter)
         {
             _playerHealth.HealHealth();
-            WonCounter = enemyGameObject.GetComponent<EnemyHealth>().GetEnemyDeathCounter();
+            _wonCounter = _enemyGameObject.GetComponent<EnemyHealth>().GetEnemyDeathCounter();
         }
     }
 
