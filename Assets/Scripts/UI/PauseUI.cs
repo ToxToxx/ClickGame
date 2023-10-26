@@ -1,11 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class PauseUI : MonoBehaviour
+public class PauseUI : MonoBehaviour, IUserInterfaceWindow
 {
-
     private void Start()
     {
         Hide();

@@ -1,38 +1,41 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class MainMenuUI : MonoBehaviour
+public class MainMenuUI : MonoBehaviour, IUserInterfaceWindow
 {
     public static MainMenuUI Instance;
 
-    [SerializeField] private GameObject tutorialUI;
+    [FormerlySerializedAs("tutorialUI")]
+    [SerializeField] private GameObject _tutorialUI;
 
-    [SerializeField] private Button playButton;
-    [SerializeField] private Button tutorialButton;
+    [FormerlySerializedAs("playButton")]
+    [SerializeField] private Button _playButton;
+
+    [FormerlySerializedAs("tutorialButton")]
+    [SerializeField] private Button _tutorialButton;
 
     private void Awake()
     {
-        playButton.onClick.AddListener(() =>
+        _playButton.onClick.AddListener(() =>
         {
-            HideMainMenu();
+            Hide();
             Loader.Load(Loader.Scene.GameScene);
         });
-        tutorialButton.onClick.AddListener(() =>
+        _tutorialButton.onClick.AddListener(() =>
         {
-            HideMainMenu();
-            tutorialUI.GetComponent<TutorialUI>().ShowTutorial();
+            Hide();
+            _tutorialUI.GetComponent<TutorialUI>().Show();
         });
         Time.timeScale = 1.0f;
     }
 
-    public void ShowMainMenu()
+    public void Show()
     {
         gameObject.SetActive(true);
     }
 
-    public void HideMainMenu()
+    public void Hide()
     {
         gameObject.SetActive(false);
     }

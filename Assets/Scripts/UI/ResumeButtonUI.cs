@@ -1,20 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class ResumeButtonUI : MonoBehaviour
 {
-    [SerializeField] private PauseUI pauseUI;
-    [SerializeField] private Button resumeButtonUI;
+    [FormerlySerializedAs("pauseUI")]
+    [SerializeField] private PauseUI _pauseUI;
+
+    [FormerlySerializedAs("resumeButtonUI")]
+    [SerializeField] private Button _resumeButtonUI;
     private void Awake()
     {
-        resumeButtonUI.onClick.AddListener(() =>
+        _resumeButtonUI.onClick.AddListener(() =>
         {
             Time.timeScale = 1.0f;
-            pauseUI.Hide();
+            _pauseUI.Hide();
         });
     }
-
 }

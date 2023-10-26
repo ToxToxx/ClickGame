@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class PauseButton : MonoBehaviour
 {
-    [SerializeField] private PauseUI pauseUI;
-    [SerializeField] private Button pauseButtonUI;
+    [FormerlySerializedAs("pauseUI")]
+    [SerializeField] private PauseUI _pauseUI;
+
+    [FormerlySerializedAs("pauseButtonUI")]
+    [SerializeField] private Button _pauseButtonUI;
+
     private void Awake()
     {
-        pauseButtonUI.onClick.AddListener(() =>
+        _pauseButtonUI.onClick.AddListener(() =>
         {
             Time.timeScale = 0.0f;
-            pauseUI.Show();
+            _pauseUI.Show();
         });
     }
 }
