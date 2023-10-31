@@ -591,8 +591,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b10cc0a0fea03740a6ecd0e1ff39930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioButton: {fileID: 898544506}
-  audioButtonText: {fileID: 547687838}
+  _audioButton: {fileID: 898544506}
+  _audioButtonText: {fileID: 547687838}
 --- !u!1 &485703221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,9 +1121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d6e2880d8c3844f9382a00c59c8cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialUI: {fileID: 1056491092}
-  playButton: {fileID: 1676898340}
-  tutorialButton: {fileID: 2029342623}
+  _tutorialUI: {fileID: 1056491092}
+  _playButton: {fileID: 1676898340}
+  _tutorialButton: {fileID: 2029342623}
 --- !u!224 &898544504 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2142077404741437131, guid: a52a828831c525a46af7a5ecf3a026e9,
@@ -1194,8 +1194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35313b1d7385434e83ce02c2a509062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuUI: {fileID: 793985666}
-  tutorialHideButton: {fileID: 568918297}
+  _mainMenuUI: {fileID: 793985666}
+  _tutorialHideButton: {fileID: 568918297}
 --- !u!1 &1389845025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,13 +2187,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2039681476007774905, guid: a52a828831c525a46af7a5ecf3a026e9,
         type: 3}
+      propertyPath: m_text
+      value: "\u041C\u0443\u0437\u044B\u043A\u0430: \u0432\u043A\u043B"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2039681476007774905, guid: a52a828831c525a46af7a5ecf3a026e9,
+        type: 3}
       propertyPath: m_fontSize
-      value: 25
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 2039681476007774905, guid: a52a828831c525a46af7a5ecf3a026e9,
         type: 3}
       propertyPath: m_fontSizeBase
-      value: 25
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 2142077404741437131, guid: a52a828831c525a46af7a5ecf3a026e9,
         type: 3}
@@ -2228,12 +2233,12 @@ PrefabInstance:
     - target: {fileID: 2142077404741437131, guid: a52a828831c525a46af7a5ecf3a026e9,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 196.7437
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 2142077404741437131, guid: a52a828831c525a46af7a5ecf3a026e9,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 54.4957
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 2142077404741437131, guid: a52a828831c525a46af7a5ecf3a026e9,
         type: 3}
