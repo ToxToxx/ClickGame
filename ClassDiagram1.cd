@@ -1,0 +1,840 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="@PlayerInputActions" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAABAACAAECBABAAAAAGAEgEAgAEBQAAA=</HashCode>
+      <FileName>Assets\InputActions\PlayerInputActions.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BadTargetFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AbstractFactory\BadTargetFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GoodTargetFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AbstractFactory\GoodTargetFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SpawnManagerAbstractFactory" Collapsed="true">
+    <Position X="14" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABAAAAACAAEAAAAAAAAAAAQAAAAACAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\AbstractFactory\SpawnManagerAbstractFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TargetPrefabsSO" Collapsed="true">
+    <Position X="19.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AbstractFactory\TargetPrefabsSO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Border" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAQAgAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Border.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameInput" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAACAAAAQAAAAAAAEABAAAAAAIAAAAAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\GameInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrabAndDealSpell" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAQCAAECAAAACAAAAAAAAAAAAAAAAAAAIAABAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GrabAndDealSpell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyHealth" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAEBAAAAAAAAAABACAAAAAAAAAAAABA=</HashCode>
+      <FileName>Assets\Scripts\HealthLogic\EnemyHealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthPoints" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACEAAAAAAAAAAAAAAAAAAAACAAAAgiAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HealthLogic\HealthPoints.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerHealth" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HealthLogic\PlayerHealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Loader" Collapsed="true">
+    <Position X="22.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\Loader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoaderCallback" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\LoaderCallback.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioManager" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAECAAAAAAAAAAAAAAAAQAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\AudioManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleManager" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQggAEAAAAgAAAAAAAAAAAIIAAAAQAAAgAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\BattleManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DamageManager" Collapsed="true">
+    <Position X="21" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wEQgAASAACAgAAAAgAAAAEQAAAAAEAAAQgEBAAAAgEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\DamageManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DamageMultiplierManager" Collapsed="true">
+    <Position X="22.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABCAAAACAAAAAAAAAAAAAAAIAQAAEAAAAABA=</HashCode>
+      <FileName>Assets\Scripts\Managers\DamageMultiplierManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RewardAdsManager" Collapsed="true">
+    <Position X="15.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAiAAAAAAAAAAIAAAAAAQAABABAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\RewardAdsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScoreManager" Collapsed="true">
+    <Position X="22.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgCACAAAAAAAAAACAAAAAAAgAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\ScoreManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundManager" Collapsed="true">
+    <Position X="12.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAASAAAAAAAAAAIAgAABAAAAAgEBAAAACAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\SoundManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DestroyAfterDelay" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Particles\DestroyAfterDelay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TargetParticle" Collapsed="true">
+    <Position X="17.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Particles\TargetParticle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortraitAnimator" Collapsed="true">
+    <Position X="22.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAACQAAAAAAAAAAAAABAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PortraitAnimator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundEffectsSO" Collapsed="true">
+    <Position X="10.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SoundEffectsSO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DealingPlayerDamage" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\TargetsLogic\DealingPlayerDamage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DestroyingObject" Collapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\TargetsLogic\DestroyingObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IncrementingPlayerDamage" Collapsed="true">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\TargetsLogic\IncrementingPlayerDamage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TargetSpawnParameters" Collapsed="true">
+    <Position X="21" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAAACAAAAAAAAQAAAAAAAAIAAAACAABAAAAIAI=</HashCode>
+      <FileName>Assets\Scripts\TargetsLogic\TargetSpawnParameters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AttackTimerUI" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\AttackTimerUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BestScoreUI" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\BestScoreUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DamagePointsUI" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAgAAAAAAAAAAAAAgAAAAAAAAIAQAAkAA=</HashCode>
+      <FileName>Assets\Scripts\UI\DamagePointsUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyDeathScoreUI" Collapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\UI\EnemyDeathScoreUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySpellUI" Collapsed="true">
+    <Position X="19.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAABBAAACAAAAQAABAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\EnemySpellUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthPointsUI" Collapsed="true">
+    <Position X="15.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\HealthPointsUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoseScreenUI" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAEAAAgAIAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\LoseScreenUI.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MainMenuUI" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAEAAAAAAEAAAEAAAAQAAAAAAAAkA=</HashCode>
+      <FileName>Assets\Scripts\UI\MainMenuUI.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PauseButton" Collapsed="true">
+    <Position X="15.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\UI\PauseButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseUI" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAEAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\PauseUI.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlayAgainButtonUI" Collapsed="true">
+    <Position X="21" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkA=</HashCode>
+      <FileName>Assets\Scripts\UI\PlayAgainButtonUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResumeButtonUI" Collapsed="true">
+    <Position X="12.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\UI\ResumeButtonUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TutorialUI" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAEAEAAAAAAQAEAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\UI\TutorialUI.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ChatController" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAICEAAAAAACAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DropdownSample" Collapsed="true">
+    <Position X="15.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAQAAAAAAIIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnvMapAnimator" Collapsed="true">
+    <Position X="21" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAACAAAAAAAAAgAAAAAAQAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.Benchmark01" Collapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAIAACAAAAAAAAQAAAAIAAQAAAAAgAABAAAAAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.Benchmark01_UGUI" Collapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAAAACAAAAAAAAQAAAAKAAQAAAAAgAABAAAAAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.Benchmark02" Collapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAEAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.Benchmark03" Collapsed="true">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACCAAAAAAAAAAAAAAAAAQAAAAAAAAAAAEEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.Benchmark04" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAIACAAAAAAAAAAAAAAAAAAAAAAAQAAAAABAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.CameraController" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAEAAEADAEBEAgAIQAIEABAAAFgYQQACAAAAAAIEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.ObjectSpin" Collapsed="true">
+    <Position X="12.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAEAIAAAAAAAAAAAAQAAAEABAIAgAAAAAAQBAAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.ShaderPropAnimator" Collapsed="true">
+    <Position X="5.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAACAAAAAAAAAgAEAAAAAAAAAAAAAAAQAgAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.SimpleScript" Collapsed="true">
+    <Position X="7" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAABAAAAAAAEAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.SkewTextExample" Collapsed="true">
+    <Position X="8.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAEAACAAAAAAAAAAAAAABAEAAAAAIAAAAAACAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TeleType" Collapsed="true">
+    <Position X="22.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TextConsoleSimulator" Collapsed="true">
+    <Position X="5.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAACAAAAAAAAAAAAAABAAAAAAIAMAAAAACCEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TextMeshProFloatingText" Collapsed="true">
+    <Position X="7" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABACICAJACAAAAAAAAAAAAAJAAQAQAAAAABAACAACEI=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TextMeshSpawner" Collapsed="true">
+    <Position X="8.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAEAAAAAAABAAAAAAAAAAAAAAAACEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TMP_ExampleScript_01" Collapsed="true">
+    <Position X="12.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAIBAAAAAAAAAAACAAAAIAAAAAAAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TMP_FrameRateCounter" Collapsed="true">
+    <Position X="14" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoQAAAAAACAAAIgAAAAgAIAAAgQAAAAAAAAAAAAAAEg=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TMP_TextEventCheck" Collapsed="true">
+    <Position X="17.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAAAAAAAAAAAAAAAAAAAAAAEAAAAAAEJAAAAAAACCAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TMP_TextInfoDebugTool" Collapsed="true">
+    <Position X="21" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIEAAIYACACAAAggAAQAAAAoABKAAEAAACAgQACgAI=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TMP_TextSelector_A" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAIAAAAAQoAAAAAAAAAQAAAWA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TMPro.Examples.TMP_TextSelector_B" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAKAAABBGgAAAIAQAQAAIAAIgAQoAABIAEAAAQAACEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TMPro.Examples.TMP_UiFrameRateCounter" Collapsed="true">
+    <Position X="7" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoQAAAAAACAAAAgAAAAgAIAAAgQAAAAAAAAAAAAAAEg=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TMPro_InstructionOverlay" Collapsed="true">
+    <Position X="8.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAIAAAAAAIgAAAAgAAAAAAQAAAAACAAAAAAAAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.VertexColorCycler" Collapsed="true">
+    <Position X="12.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.VertexJitter" Collapsed="true">
+    <Position X="14" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACAAAAAAAAAFAAAAAAAAAAgIAMAAAAACCEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.VertexShakeA" Collapsed="true">
+    <Position X="15.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAACAAAFAACAAAAAAAgIAMAAAAACCEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.VertexShakeB" Collapsed="true">
+    <Position X="17.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACAAAAAAAAAFAAAAAAAAAAgIAMAAAAACCEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.VertexZoom" Collapsed="true">
+    <Position X="19.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACAAAAAAAAAFAAAAAAAAAAgIAMAAAAACCEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.WarpTextExample" Collapsed="true">
+    <Position X="22.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAEAACAAAAAAAAAFAAAABAAAAAAAIAAAAAACAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.TMP_DigitValidator" Collapsed="true">
+    <Position X="10.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.TMP_PhoneNumberValidator" Collapsed="true">
+    <Position X="15.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.TMP_TextEventHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAgAEEAAAAAMABAAEAIEAIAUApAAAAAAAAAYACBWE=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="YG.DebuggingModeYG" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEJAAiUMKAAgAAgBAAwDIIBQAgEIQAASgAgQTGA=</HashCode>
+      <FileName>Assets\YandexGame\DebuggingMode\Scripts\DebuggingModeYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.ActivityOnAuthorizationYG" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAIIAAAAAAEACAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\ActivityOnAuthorizationYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.BannerYG" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIQAgACgAAAQAAJARABAAAiABAACBCAAAAEQEAAQQA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\CustomRBT\BannerYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.ForVisualScriptYG" Collapsed="true">
+    <Position X="22.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAGAAAAJiQBAECASAAAAAhAQAAEAAABCSYAFA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\ForVisualScriptYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.GetPlayerYG" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAgAAAAAAAAAACAAABAAIQAAAAAAADAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\GetPlayerYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.GraphicSettingsYG" Collapsed="true">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACIgxCAAAAAgAIwAAIggBCwAQQAUGIBAgEAAUWCkE=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\GraphicSettingsYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.ImageLoadYG" Collapsed="true">
+    <Position X="17.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAgAYAAEAAAAAAAACgAAAACAAAAAAAAIgAAAAAAEA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\ImageLoadYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.InfoYG" Collapsed="true">
+    <Position X="21" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IMgQACIAAggoAAhAgADggAAAJgFIEAABAAhIBIQQEQA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\InfoYG\InfoYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.LanguageYG" Collapsed="true">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAYgxCAIAAIogIwABIgggCwCQQAUTIBAwMAIAWCmE=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Language Translation\LanguageYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.LangYGAdditionalText" Collapsed="true">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAIAAAIAAKA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Language Translation\LangYGAdditionalText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.LBPlayerDataYG" Collapsed="true">
+    <Position X="17.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAABAAgAAAAAQAACAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Leaderboard\LBPlayerDataYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.LeaderboardYG" Collapsed="true">
+    <Position X="21" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CkYAQCEAACAEAAABAAhgAACAAACBACAIJCAAACAkGAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Leaderboard\LeaderboardYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.ConsumePurchasesYG" Collapsed="true">
+    <Position X="19.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACAAAAAAAAgAAAAAAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Payments\ConsumePurchasesYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.PaymentsCatalogYG" Collapsed="true">
+    <Position X="19.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEACAAAAEBEAGAAgCAAAAAAAAMAQACAAAACAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Payments\PaymentsCatalogYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.PurchaseYG" Collapsed="true">
+    <Position X="8.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAABAAkAAAAAAAEAAAAAAAAAAAASAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Payments\PurchaseYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.PromptYG" Collapsed="true">
+    <Position X="5.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAIAAUAAAAAAAAQAAAAAAAAAAAAAJAAAAAUAACEg=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\PromptYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.ReviewYG" Collapsed="true">
+    <Position X="14" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAAEAAEAAAEAAAAAAAACgAAACAAAAIgAAAAAAICEA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\ReviewYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.ViewingAdsYG" Collapsed="true">
+    <Position X="21" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAwAAAAgCIAAAAgAAAAAAAECAIYAACIAAAggACECEA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\ViewingAdsYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.YandexGame" Collapsed="true">
+    <Position X="5.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>E/WRbolcOjYbgcwCwm+CbHazFxe9IFV+Ug7JpXXReXg=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\YandexGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.YandexMetrica" Collapsed="true">
+    <Position X="7" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAEAAAAAAQEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\YandexMetrica\YandexMetrica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.SavesYG" Collapsed="true">
+    <Position X="21" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAIAiAAAAAAACAAAAAAAAAAQAAAAAAEAA=</HashCode>
+      <FileName>Assets\YandexGame\WorkingData\SavesYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Example.DebugViewing" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAAAAAAAAAAAAAAAAQAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\Example\Scripts\DebugViewing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Example.GetPlayerData" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAEABAAAAAAAQAAAAAAAAAAAIAAAAAAAACEA=</HashCode>
+      <FileName>Assets\YandexGame\Example\Scripts\GetPlayerData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Example.LanguageExample" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgBCAAAAAAAAAAAAAAAAAAAQAAAMAAAAAAAACEA=</HashCode>
+      <FileName>Assets\YandexGame\Example\Scripts\LanguageExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Example.NewResultLBExample" Collapsed="true">
+    <Position X="10.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAABAAAAAAAAAACAAEAIAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\Example\Scripts\NewResultLBExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Example.OpenAuthorizationDialog" Collapsed="true">
+    <Position X="14" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\Example\Scripts\OpenAuthorizationDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Example.ReceivingPurchaseExample" Collapsed="true">
+    <Position X="10.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAQAEAAEAAAAAAAAAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\YandexGame\Example\Scripts\ReceivingPurchaseExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Example.RewardedAd" Collapsed="true">
+    <Position X="17.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgIAAAAAAAIAAAEAAAAACIAAAAAAAACEA=</HashCode>
+      <FileName>Assets\YandexGame\Example\Scripts\RewardedAd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Example.SaverTest" Collapsed="true">
+    <Position X="19.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAgIEAAAAAACAAAAAAAAAAAEAAAAEIAAAAAAAACEA=</HashCode>
+      <FileName>Assets\YandexGame\Example\Scripts\SaverTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Example.SwitchSceneTest" Collapsed="true">
+    <Position X="15.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\Example\Scripts\SwitchSceneTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Example.YandexMetricaExample" Collapsed="true">
+    <Position X="8.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\Example\Scripts\YandexMetricaExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Insides.CallingAnEvent" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Inside\CallingAnEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Insides.ConfigYG" Collapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Inside\ConfigYG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Insides.JsonUtils" Collapsed="true">
+    <Position X="22.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\YandexMetrica\JsonUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Utils.Lang.LangMethods" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAACAAgAAAAAAAAAwAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Language Translation\UtilsLang.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Utils.LB.LBData" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAEAAAAACAAgAAAIAAABAAAAIAAACAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Leaderboard\UtilsLB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Utils.LB.LBPlayerData" Collapsed="true">
+    <Position X="15.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAIQAAAAAAAAAIAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Leaderboard\UtilsLB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Utils.LB.LBThisPlayerData" Collapsed="true">
+    <Position X="19.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Leaderboard\UtilsLB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Utils.LB.LBMethods" Collapsed="true">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Leaderboard\UtilsLB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YG.Utils.Pay.Purchase" Collapsed="true">
+    <Position X="7" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAwAAAAAAAIAAAAAAACAAAAQAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\Payments\UtilsPayments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityToolbag.ConditionallyVisibleAttribute" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\YandexGame\ScriptsYG\UnityToolbag-main\ConditionallyVisiblePropertyDrawer\Runtime\ConditionallyVisibleAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ITargetFactory" Collapsed="true">
+    <Position X="5.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AbstractFactory\ITargetFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IUserInterfaceWindow" Collapsed="true">
+    <Position X="7" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interfaces\IUserInterfaceWindow.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
